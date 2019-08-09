@@ -1,23 +1,21 @@
 import Typography from 'typography'
-import Wordpress2016 from 'typography-theme-wordpress-2016'
 
-Wordpress2016.overrideThemeStyles = () => {
-	return {
-		'a.gatsby-resp-image-link': {
-			boxShadow: `none`,
+const typography = new Typography({
+	googleFonts: [
+		{
+			name: 'Source Serif Pro',
+			styles: ['400', '600', '700'],
 		},
-	}
-}
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-	typography.injectStyles()
-}
+		{
+			name: 'Merriweather',
+			styles: ['400', '600', '700'],
+		},
+	],
+	baseFontSize: '21px',
+	baseLineHeight: 1.666,
+	headerFontFamily: ['Merriweather', 'sans-serif'],
+	headerWeight: '600',
+	bodyFontFamily: ['Source Serif Pro', 'serif'],
+})
 
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
