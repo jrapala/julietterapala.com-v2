@@ -1,6 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
+import About from '../components/About'
+import Projects from '../components/Projects'
+import Writing from '../components/Writing'
+import Email from '../components/Email'
 
 const App = () => (
 	<Layout>
@@ -14,8 +18,10 @@ const App = () => (
 				`react native`,
 			]}
 		/>
-		<h1>Home</h1>
-		<footer>© {new Date().getFullYear()} Juliette Rapala</footer>
+		<About />
+		<Projects />
+		<Writing />
+		<Email />
 	</Layout>
 )
 
