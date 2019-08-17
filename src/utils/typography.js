@@ -3,19 +3,19 @@ import Typography from 'typography'
 const typography = new Typography({
 	googleFonts: [
 		{
-			name: 'Source Serif Pro',
+			name: 'Assistant',
 			styles: ['400', '600', '700'],
 		},
 		{
-			name: 'Merriweather',
-			styles: ['400', '600', '700'],
+			name: 'Poppins',
+			styles: ['300', '400'],
 		},
 	],
-	baseFontSize: '21px',
+	baseFontSize: '16px',
 	baseLineHeight: 1.666,
-	headerFontFamily: ['Merriweather', 'sans-serif'],
-	headerWeight: '600',
-	bodyFontFamily: ['Source Serif Pro', 'serif'],
+	headerFontFamily: ['Assistant', 'sans-serif'],
+	headerWeight: '700',
+	bodyFontFamily: ['Poppins', 'serif'],
 })
 
 export default typography

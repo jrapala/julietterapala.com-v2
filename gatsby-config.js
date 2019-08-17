@@ -1,6 +1,7 @@
 module.exports = {
 	siteMetadata: {
 		title: `Juliette Rapala`,
+		subtitle: `Software Developer`,
 		tagline: `I build JavaScript apps for the web, mobile, and desktop`,
 		description: `I build JavaScript apps for the web, mobile, and desktop`,
 		author: `@jrapala`,
