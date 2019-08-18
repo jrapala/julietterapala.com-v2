@@ -6,10 +6,14 @@ import SocialIcons from './SocialIcons'
 const Container = styled.footer`
 	color: ${props => props.theme.colors.lightGray};
 	text-align: center;
-	margin-top: 32px;
 
 	> div {
 		color: ${props => props.theme.colors.mediumGray};
+	}
+
+	> p {
+		font-size: 0.75em;
+		margin-top: 1em;
 	}
 `
 

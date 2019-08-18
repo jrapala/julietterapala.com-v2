@@ -7,7 +7,7 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 80vh;
+	height: 100vh;
 
 	> * {
 		margin-top: 0.2em;
@@ -33,7 +33,7 @@ const Container = styled.div`
 		font-family: ${props => props.theme.font.secondary.fontFamily};
 		font-size: 1.5em;
 		font-weight: ${props => props.theme.font.secondary.light};
-		margin-top: 3em;
+		margin-top: 2em;
 	}
 `
 

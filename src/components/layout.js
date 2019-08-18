@@ -13,10 +13,9 @@ const Layout = ({ children }) => {
 				<GlobalStyle />
 				<div
 					style={{
-						margin: `0 auto`,
+						margin: '0 auto',
 						maxWidth: 880,
-						padding: `0px 1.0875rem 1.45rem`,
-						paddingTop: '0',
+						paddingTop: 0,
 					}}
 				>
 					<main>{children}</main>
