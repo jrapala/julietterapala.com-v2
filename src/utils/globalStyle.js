@@ -41,11 +41,10 @@ const GlobalStyle = createGlobalStyle`
 
 
 	a {
-		color: #111111;
     	font-weight: bold;
     	text-decoration: none;
     	&:hover {
-      		color: #9112f1;
+      		color: ${props => props.theme.colors.primary};
     	}
   	}
 `

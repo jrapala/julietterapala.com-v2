@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Container = styled.a`
 	color: inherit;
-	margin-right: 16px;
-	font-size: 1.2rem;
+	margin: 0 0.25em;
+	font-size: 1.5em;
 `
 
 const Icon = ({ icon, url, alt }) => (

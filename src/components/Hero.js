@@ -7,16 +7,17 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 90vh;
+	height: 80vh;
 
 	> * {
-		display: block;
 		margin-top: 0.2em;
+		text-align: center;
 	}
 
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 0.1em;
+		width: 100vw;
 	}
 
 	h2 {
