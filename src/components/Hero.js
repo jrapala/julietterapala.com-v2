@@ -17,6 +17,7 @@ const Container = styled.div`
 	h1 {
 		font-size: 4rem;
 		margin-bottom: 0.1em;
+		margin-top: 1em;
 		width: 100vw;
 	}
 

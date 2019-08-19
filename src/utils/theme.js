@@ -5,8 +5,8 @@ export const theme = {
 	font: {
 		primary: {
 			fontFamily: 'Assistant, sans-serif;',
-			light: 400,
-			regular: 600,
+			regular: 400,
+			semiBold: 600,
 			bold: 700,
 		},
 		secondary: {

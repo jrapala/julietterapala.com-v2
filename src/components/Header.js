@@ -1,46 +1,71 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
-import SocialIcons from './SocialIcons'
+import { Link } from 'gatsby'
+import Logo from '../components/Logo'
 
 const Container = styled.header`
+	align-items: center;
+	border-bottom: 1px solid ${props => props.theme.colors.lightGray};
+	display: flex;
+	height: 3em;
 	text-align: center;
-	margin-top: 48px;
-	margin-bottom: 36px;
 `
 
-const Title = styled.h1`
-	font-size: 3rem;
-	margin-bottom: 1rem;
+const NavLinkImage = styled(Link)`
+	color: ${props => props.theme.colors.mediumGray};
+	margin: 0 0.5rem 0 0.5rem;
+	padding: 0.25rem;
+	width: 8em;
+
+	&.current-page {
+		color: ${props => props.theme.colors.primary};
+	}
 
 	@media screen and (max-width: 480px) {
-		font-size: 2.75rem;
-		margin: 1rem auto;
+		margin-top: 0.1em;
+		width: 100%;
 	}
 `
 
-const Tagline = styled.p`
-	margin-bottom: 0;
+const NavLinkText = styled(Link)`
+	/* padding: 2em; */
+	color: ${props => props.theme.colors.mediumGray};
+	font-size: 1rem;
+	font-weight: ${props => props.theme.font.primary.semiBold};
+	margin: 0 0.5rem 0 0;
+	padding: 0.25rem;
+	text-decoration: none;
+
+	&.current-page {
+		color: ${props => props.theme.colors.primary};
+	}
+
+	@media screen and (max-width: 480px) {
+		display: none;
+	}
 `
 
-const Header = () => {
-	const data = useStaticQuery(graphql`
-		query HeaderQuery {
-			site {
-				siteMetadata {
-					title
-					tagline
-				}
-			}
-		}
-	`)
+const Nav = styled.nav`
+	margin-top: 0.1em;
+`
 
-	return (
-		<Container>
-			<Title>{data.site.siteMetadata.title}</Title>
-			<Tagline>{data.site.siteMetadata.tagline}</Tagline>
-			<SocialIcons />
-		</Container>
-	)
-}
+const Header = () => (
+	<Container>
+		<NavLinkImage to="/" activeClassName="current-page">
+			<Logo />
+		</NavLinkImage>
+		<Nav>
+			<NavLinkText to="/about" activeClassName="current-page">
+				About
+			</NavLinkText>
+			<NavLinkText to="/projects" activeClassName="current-page">
+				Project
+			</NavLinkText>
+			<NavLinkText to="/writing" activeClassName="current-page">
+				Writing
+			</NavLinkText>
+		</Nav>
+	</Container>
+)
+
 export default Header

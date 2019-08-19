@@ -2,14 +2,14 @@ import React, { Fragment } from 'react'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../utils/globalStyle'
 import { theme } from '../utils/theme'
-// import Header from './Header'
+import Header from './Header'
 import Footer from './Footer'
 
 const Layout = ({ children }) => {
 	return (
 		<ThemeProvider theme={theme}>
 			<Fragment>
-				{/* <Header /> */}
+				<Header />
 				<GlobalStyle />
 				<div
 					style={{
