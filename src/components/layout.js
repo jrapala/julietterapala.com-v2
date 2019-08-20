@@ -5,25 +5,23 @@ import { theme } from '../utils/theme'
 import Header from './Header'
 import Footer from './Footer'
 
-const Layout = ({ children }) => {
-	return (
-		<ThemeProvider theme={theme}>
-			<Fragment>
-				<Header />
-				<GlobalStyle />
-				<div
-					style={{
-						margin: '0 auto',
-						maxWidth: 880,
-						paddingTop: 0,
-					}}
-				>
-					<main>{children}</main>
-				</div>
-				<Footer />
-			</Fragment>
-		</ThemeProvider>
-	)
-}
+const Layout = ({ children }) => (
+	<ThemeProvider theme={theme}>
+		<Fragment>
+			<Header />
+			<GlobalStyle />
+			<div
+				style={{
+					margin: '0 auto',
+					maxWidth: 880,
+					paddingTop: 0,
+				}}
+			>
+				<main>{children}</main>
+			</div>
+			<Footer />
+		</Fragment>
+	</ThemeProvider>
+)
 
 export default Layout

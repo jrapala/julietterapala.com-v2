@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+import { Location } from '@reach/router'
 import Logo from '../components/Logo'
 
 const Container = styled.header`
@@ -12,14 +13,7 @@ const Container = styled.header`
 `
 
 const NavLinkImage = styled(Link)`
-	color: ${props => props.theme.colors.mediumGray};
-	margin: 0 0.5rem 0 0.5rem;
-	padding: 0.25rem;
-	width: 8em;
-
-	&.current-page {
-		color: ${props => props.theme.colors.primary};
-	}
+	margin: 2em 1em 0 1em;
 
 	@media screen and (max-width: 480px) {
 		margin-top: 0.1em;
@@ -28,7 +22,6 @@ const NavLinkImage = styled(Link)`
 `
 
 const NavLinkText = styled(Link)`
-	/* padding: 2em; */
 	color: ${props => props.theme.colors.mediumGray};
 	font-size: 1rem;
 	font-weight: ${props => props.theme.font.primary.semiBold};
@@ -49,23 +42,33 @@ const Nav = styled.nav`
 	margin-top: 0.1em;
 `
 
-const Header = () => (
-	<Container>
-		<NavLinkImage to="/" activeClassName="current-page">
-			<Logo />
-		</NavLinkImage>
-		<Nav>
-			<NavLinkText to="/about" activeClassName="current-page">
-				About
-			</NavLinkText>
-			<NavLinkText to="/projects" activeClassName="current-page">
-				Project
-			</NavLinkText>
-			<NavLinkText to="/writing" activeClassName="current-page">
-				Writing
-			</NavLinkText>
-		</Nav>
-	</Container>
-)
+const Header = () => {
+	return (
+		<Container>
+			<NavLinkImage to="/" activeClassName="current-page">
+				<Location>
+					{({ location }) => {
+						return location.pathname === '/' ? (
+							<Logo color="#C92BBA" />
+						) : (
+							<Logo />
+						)
+					}}
+				</Location>
+			</NavLinkImage>
+			<Nav>
+				<NavLinkText to="/about" activeClassName="current-page">
+					About
+				</NavLinkText>
+				<NavLinkText to="/projects" activeClassName="current-page">
+					Project
+				</NavLinkText>
+				<NavLinkText to="/writing" activeClassName="current-page">
+					Writing
+				</NavLinkText>
+			</Nav>
+		</Container>
+	)
+}
 
 export default Header
