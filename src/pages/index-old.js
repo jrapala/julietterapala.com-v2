@@ -1,7 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import About from '../components/About'
 import Projects from '../components/Projects'
 import Writing from '../components/Writing'
 import Email from '../components/Email'
@@ -18,7 +17,6 @@ const App = () => (
 				`react native`,
 			]}
 		/>
-		<About />
 		<Projects />
 		<Writing />
 		<Email />

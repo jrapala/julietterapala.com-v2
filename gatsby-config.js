@@ -10,8 +10,18 @@ module.exports = {
 			linkedin: `julietterapala`,
 			github: `jrapala`,
 		},
-		about: `<p>I'm a software developer for <a href='http://www.eventric.com' alt="Eventric" target='_blank' rel='noopener noreferrer'>Eventric</a>.</p>
-    <p>Eventric is the leading SaaS developer of live event and tour management software solutions. We power efficiency and measurable bottom-line profitability for event production and tour management. We’ve designed and cultivated our web, mobile, and cloud solutions Master Tour and Live Access to precisely benefit the needs of the top professionals across music, tv/film, sports, production, corporate, and touring industries.</p>`,
+		about: {
+			content: `<p>I am a web developer and software engineer who specializes in JavaScript and React.</p>`,
+			title: `Hi, I’m Juliette 👋`,
+		},
+		work: {
+			content: `<p>I currently work for <a href="http://www.eventric.com" alt="Eventric" target="_blank" rel="noopener noreferrer">Eventric</a> where we build live event and tour management software solutions. I’m part of the team that has designed and built <a href="https://www.eventric.com/master-tour-3/" alt="Master Tour 3.0" target="_blank" rel="noopener noreferrer">Master Tour 3.0</a>, a React app built with Electron. I also lead the development team for <a href="https://www.eventric.com/master-tour-3/" alt="Master Tour Mobile" target="_blank" rel="noopener noreferrer">Master Tour Mobile</a>, an <a href="https://play.google.com/store/apps/details?id=com.eventric.mastertour&hl=en_US" alt="Master Tour Mobile for Android" target="_blank" rel="noopener noreferrer">Android</a>/<a href="https://apps.apple.com/us/app/master-tour-mobile/id347364187" alt="Master Tour Mobile for iOS" target="_blank" rel="noopener noreferrer">iOS</a> app built with React Native.</p>`,
+			title: `What I Do For Work:`,
+		},
+		fun: {
+			content: `<p><ul><li><b>Code.</b> I love learning new things, such as Gatsby and GraphQL, and building apps to learn it (this site was built using both of those!). You can see more of my projects here.</li><li><b>Write.</b> I like to write about things that I am learning. I also write a lot about React Native, to try to make it more accessible to React developers. You can read some of my posts here.</li><li><b>Travel.</b></ul></p>`,
+			title: `What I Do For Fun:`,
+		},
 		portfolio: [
 			{
 				title: 'Reaction Radio',

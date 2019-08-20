@@ -39,14 +39,18 @@ const GlobalStyle = createGlobalStyle`
 		margin-top: 0.25rem;
 	}
 
-
-	a {
+	main a {
+		color: ${props => props.theme.colors.primary};
     	font-weight: bold;
-    	text-decoration: none;
+		text-decoration: none;
+		padding: .1em;
     	&:hover {
-      		color: ${props => props.theme.colors.primary};
+			background-color: ${props => props.theme.colors.primary};
+			border-radius: 5px;
+			color: #FFF;
     	}
-  	}
+	}
+	  
 `
 
 export default GlobalStyle
