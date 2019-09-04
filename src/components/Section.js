@@ -21,11 +21,11 @@ const Content = styled.div`
 
 const ImageContent = styled.div`
 	display: flex;
-	order: 2;
-	padding: 0 1.5em;
 	margin-bottom: -2em;
 	margin-right: 7em;
 	margin-top: -3.5em;
+	order: 2;
+	padding: 0 1.5em;
 
 	@media screen and (max-width: 600px) {
 		margin: 0 auto;
