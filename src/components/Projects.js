@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Title from './Title'
+import Title from '../elements/Title'
 
 const Projects = () => {
 	const data = useStaticQuery(graphql`

@@ -5,7 +5,7 @@ import {
 	faGithub,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
-import Icon from './Icon'
+import Icon from '../elements/Icon'
 
 const socialSites = {
 	twitter: {

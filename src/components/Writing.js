@@ -1,6 +1,6 @@
 import React from 'react'
 import articles from '../utils/articles'
-import Title from './Title'
+import Title from '../elements/Title'
 
 const Writing = () => (
 	<section>

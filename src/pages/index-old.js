@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Projects from '../components/Projects'
 import Writing from '../components/Writing'
-import Email from '../components/Email'
+import Email from '../elements/Email'
 
 const App = () => (
 	<Layout>

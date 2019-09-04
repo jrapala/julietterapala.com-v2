@@ -1,6 +1,21 @@
 import React, { Fragment } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import SectionTitle from './SectionTitle'
+import styled from 'styled-components'
+import SectionTitle from '../elements/SectionTitle'
+import MasterTourLogo from '../elements/MasterTourLogo'
+
+const Container = styled.div`
+	display: flex;
+
+	@media screen and (max-width: 480px) {
+		align-items: center;
+		flex-direction: column;
+	}
+`
+
+const Content = styled.div`
+	padding: 0 1.5em;
+`
 
 const About = ({ section }) => {
 	const data = useStaticQuery(graphql`
@@ -30,11 +45,14 @@ const About = ({ section }) => {
 	return (
 		<Fragment>
 			<SectionTitle title={title} />
-			<div
-				dangerouslySetInnerHTML={{
-					__html: content,
-				}}
-			/>
+			<Container>
+				{section === 'work' && <MasterTourLogo />}
+				<Content
+					dangerouslySetInnerHTML={{
+						__html: content,
+					}}
+				/>
+			</Container>
 		</Fragment>
 	)
 }

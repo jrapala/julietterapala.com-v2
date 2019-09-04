@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Logo = ({ color, size }) => (
+const JRLogo = ({ color, size }) => (
 	<svg
 		width={size ? size * 2.4305555556 : 175}
 		height={size ? size : 72}
@@ -27,4 +27,4 @@ const Logo = ({ color, size }) => (
 	</svg>
 )
 
-export default Logo
+export default JRLogo

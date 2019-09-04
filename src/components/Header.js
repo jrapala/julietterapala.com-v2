@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
 import { Location } from '@reach/router'
-import Logo from '../components/Logo'
+import JRLogo from '../elements/JRLogo'
 
 const Container = styled.header`
 	align-items: center;
@@ -49,9 +49,9 @@ const Header = () => {
 				<Location>
 					{({ location }) => {
 						return location.pathname === '/' ? (
-							<Logo color="#C92BBA" />
+							<JRLogo color="#C92BBA" />
 						) : (
-							<Logo />
+							<JRLogo />
 						)
 					}}
 				</Location>
