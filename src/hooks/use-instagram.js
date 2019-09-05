@@ -3,14 +3,24 @@ import { graphql, useStaticQuery } from 'gatsby'
 const useInstagram = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			allInstaNode(limit: 10) {
+			allInstagramContent(
+				filter: {
+					id: {
+						in: [
+							"e8371280-c3f8-55c5-a827-edb7a4d3d492"
+							"97305b11-b472-5a33-a61c-f36a0eefaa17"
+							"ec187cee-265b-519f-b0cb-e7eab1420ebc"
+							"da3d9a30-8a1e-540f-87c3-4323446b8ff7"
+						]
+					}
+				}
+			) {
 				nodes {
 					id
-					caption
-					username
-					localFile {
+					link
+					localImage {
 						childImageSharp {
-							fluid(maxWidth: 120, maxHeight: 120) {
+							fluid(maxWidth: 240, maxHeight: 240) {
 								...GatsbyImageSharpFluid_withWebp
 							}
 						}
@@ -20,11 +30,10 @@ const useInstagram = () => {
 		}
 	`)
 
-	return data.allInstaNode.nodes.map(node => ({
-		...node.localFile.childImageSharp,
+	return data.allInstagramContent.nodes.map(node => ({
+		...node.localImage.childImageSharp,
 		id: node.id,
-		caption: node.caption,
-		username: node.username,
+		link: node.link,
 	}))
 }
 

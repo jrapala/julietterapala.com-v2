@@ -1,3 +1,7 @@
+require('dotenv').config({
+	path: `.env`,
+})
+
 module.exports = {
 	siteMetadata: {
 		title: `Juliette Rapala`,
@@ -94,9 +98,9 @@ module.exports = {
 			},
 		},
 		{
-			resolve: 'gatsby-source-instagram',
+			resolve: `gatsby-source-instagram-all`,
 			options: {
-				username: 'warmdesertwinds',
+				access_token: process.env.INSTAGRAM_TOKEN,
 			},
 		},
 	],

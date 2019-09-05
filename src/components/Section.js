@@ -73,7 +73,7 @@ const About = ({ section }) => {
 				{section === 'about' && (
 					<ImageContent>
 						<Image
-							fixed={data.image.childImageSharp.fluid}
+							fluid={data.image.childImageSharp.fluid}
 							alt="Juliette Rapala"
 							style={styles.imageWrapper}
 							imgStyle={styles.image}

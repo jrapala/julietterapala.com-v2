@@ -61,7 +61,7 @@ const Header = () => {
 					About
 				</NavLinkText>
 				<NavLinkText to="/projects" activeClassName="current-page">
-					Project
+					Projects
 				</NavLinkText>
 				<NavLinkText to="/writing" activeClassName="current-page">
 					Writing
