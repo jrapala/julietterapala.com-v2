@@ -1,6 +1,12 @@
 const articles = [
 	{
 		title:
+			'How to Upgrade from React Native 0.57 to 0.59 | Part 2: Upgrading to 0.59',
+		link:
+			'https://medium.com/@jrapala/how-to-upgrade-from-react-native-0-57-to-0-59-part-2-upgrading-to-0-59-32323f49857d?source=your_stories_page---------------------------',
+	},
+	{
+		title:
 			'How to Upgrade from React Native 0.57 to 0.59 | Part 1: Upgrading to 0.58',
 		link:
 			'https://medium.com/@jrapala/how-to-upgrade-from-react-native-0-57-to-0-59-part-1-upgrading-to-0-58-1d6a672186cb',
