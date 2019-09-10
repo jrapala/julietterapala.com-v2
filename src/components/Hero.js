@@ -36,6 +36,22 @@ const Container = styled.div`
 		font-weight: ${props => props.theme.font.secondary.light};
 		margin-top: 2em;
 	}
+
+	@media screen and (max-width: 520px) {
+		h1 {
+			font-size: 3.5em;
+			margin-top: 20%;
+			width: 90vw;
+		}
+		h2 {
+			font-size: 1.5em;
+			width: 90vw;
+		}
+		h3 {
+			font-size: 1.25em;
+			width: 90vw;
+		}
+	}
 `
 
 const Hero = () => {

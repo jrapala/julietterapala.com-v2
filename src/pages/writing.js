@@ -9,6 +9,7 @@ const Container = styled.section`
 	display: flex;
 	flex-direction: column;
 	margin-left: 1.5em;
+	max-width: 80%;
 `
 
 const NotFoundPage = () => {
