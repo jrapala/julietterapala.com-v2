@@ -13,7 +13,9 @@ const GlobalStyle = createGlobalStyle`
 	html,
 	body {
 		margin: 0;
-		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+		font-family: ${props =>
+			props.theme.font.primary
+				.fontFamily}, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;;
 		font-size: 18px;
 		line-height: 1.4;
 
