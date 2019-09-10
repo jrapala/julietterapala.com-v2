@@ -9,7 +9,9 @@ jobs:
             - image: circleci/node:10
 
         working_directory: ~/gatsby-site
-
+        branches:
+            only:
+                - master
         steps:
             - checkout
 
