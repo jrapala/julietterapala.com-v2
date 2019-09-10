@@ -1,23 +1,21 @@
-import Typography from "typography"
-import Wordpress2016 from "typography-theme-wordpress-2016"
+import Typography from 'typography'
 
-Wordpress2016.overrideThemeStyles = () => {
-  return {
-    "a.gatsby-resp-image-link": {
-      boxShadow: `none`,
-    },
-  }
-}
-
-delete Wordpress2016.googleFonts
-
-const typography = new Typography(Wordpress2016)
-
-// Hot reload typography in development.
-if (process.env.NODE_ENV !== `production`) {
-  typography.injectStyles()
-}
+const typography = new Typography({
+	googleFonts: [
+		{
+			name: 'Assistant',
+			styles: ['400', '600', '700'],
+		},
+		{
+			name: 'Poppins',
+			styles: ['300', '400'],
+		},
+	],
+	baseFontSize: '16px',
+	baseLineHeight: 1.666,
+	headerFontFamily: ['Assistant', 'sans-serif'],
+	headerWeight: '700',
+	bodyFontFamily: ['Poppins', 'serif'],
+})
 
 export default typography
-export const rhythm = typography.rhythm
-export const scale = typography.scale
