@@ -10,13 +10,18 @@ const Container = styled.header`
 	display: flex;
 	height: 3em;
 	text-align: center;
+
+	@media screen and (max-width: 520px) {
+		height: 7.5em;
+		flex-direction: column;
+	}
 `
 
 const NavLinkImage = styled(Link)`
 	margin: 2em 1em 0 1em;
 
-	@media screen and (max-width: 480px) {
-		margin-top: 0.1em;
+	@media screen and (max-width: 520px) {
+		margin-top: 0.75em;
 		width: 100%;
 	}
 `
@@ -33,13 +38,17 @@ const NavLinkText = styled(Link)`
 		color: ${props => props.theme.colors.primary};
 	}
 
-	@media screen and (max-width: 480px) {
-		display: none;
+	&:hover {
+		color: ${props => props.theme.colors.primary};
+		transition: all 200ms ease-in-out;
 	}
 `
 
 const Nav = styled.nav`
 	margin-top: 0.1em;
+	@media screen and (max-width: 520px) {
+		display: flex;
+	}
 `
 
 const Header = () => {

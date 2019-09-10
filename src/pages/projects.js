@@ -51,14 +51,15 @@ const Authors = styled.div`
 
 const StyledImage = styled(Image)`
 	display: flex;
-	height: 50%;
 	margin: 0 auto;
 	overflow: hidden;
 	width: 22em;
 
 	@media screen and (max-width: 780px) {
 		margin-bottom: -10%;
-		width: 100%;
+		margin-left: -10%;
+		margin-right: -10%;
+		width: 140%;
 	}
 `
 
