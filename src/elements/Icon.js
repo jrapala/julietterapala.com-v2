@@ -6,6 +6,10 @@ const Container = styled.a`
 	color: inherit;
 	margin: 0 0.25em;
 	font-size: 1.5em;
+
+	&:hover {
+		color: ${props => props.theme.colors.primary};
+	}
 `
 
 const Icon = ({ icon, url, alt }) => (
