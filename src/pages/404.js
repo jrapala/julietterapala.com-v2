@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import PageTitle from '../elements/PageTitle'
 
 const Container = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
 const NotFoundPage = () => {
 	return (
 		<Layout>
-			<SEO title="404: Not Found" />
+			<Seo title="404: Not Found" />
 			<PageTitle title="Not Found" />
 			<Container>
 				<p>
