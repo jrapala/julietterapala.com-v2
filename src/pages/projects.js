@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
 import Image from 'gatsby-image'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import PageTitle from '../elements/PageTitle'
 import Platform from '../elements/Platform'
 import ButtonSolid from '../elements/ButtonSolid'
@@ -87,7 +87,7 @@ const About = () => {
 
 	return (
 		<Layout>
-			<SEO title="Projects" />
+			<Seo title="Projects" />
 			<PageTitle title="Projects" />
 			<Platform>
 				<h2>Reaction Radio</h2>

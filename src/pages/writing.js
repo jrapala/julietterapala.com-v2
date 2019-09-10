@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import Layout from '../components/Layout'
-import SEO from '../components/SEO'
+import Seo from '../components/Seo'
 import PageTitle from '../elements/PageTitle'
 import articles from '../utils/articles'
 
@@ -14,7 +14,7 @@ const Container = styled.section`
 const NotFoundPage = () => {
 	return (
 		<Layout>
-			<SEO title="Writing" />
+			<Seo title="Writing" />
 			<PageTitle title="Writing" />
 			<Container>
 				<p>Here are some of my blog posts!</p>
