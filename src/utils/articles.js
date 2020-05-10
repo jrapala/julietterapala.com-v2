@@ -1,9 +1,14 @@
 const articles = [
 	{
+		title: 'Migrating Your React Native iOS Project to Use CocoaPods',
+		link:
+			'https://medium.com/@jrapala/migrating-your-react-native-ios-project-to-use-cocoapods-6feaca235d7e',
+	},
+	{
 		title:
 			'How to Upgrade from React Native 0.57 to 0.59 | Part 2: Upgrading to 0.59',
 		link:
-			'https://medium.com/@jrapala/how-to-upgrade-from-react-native-0-57-to-0-59-part-2-upgrading-to-0-59-32323f49857d?source=your_stories_page---------------------------',
+			'https://medium.com/@jrapala/how-to-upgrade-from-react-native-0-57-to-0-59-part-2-upgrading-to-0-59-32323f49857d',
 	},
 	{
 		title:
