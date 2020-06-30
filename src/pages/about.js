@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageTitle from '../elements/PageTitle'
 import Section from '../components/Section'
-import Instagram from '../components/Instagram'
+// import Instagram from '../components/Instagram'
 
 const About = () => (
 	<Layout>
@@ -12,7 +12,7 @@ const About = () => (
 		<Section section="about" />
 		<Section section="work" />
 		<Section section="fun" />
-		<Instagram />
+		{/* <Instagram /> */}
 	</Layout>
 )
 
