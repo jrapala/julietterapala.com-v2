@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Link } from 'gatsby'
+// eslint-disable-next-line import/no-unresolved
 import { Location } from '@reach/router'
 import JRLogo from '../elements/JRLogo'
 
 const Container = styled.header`
 	align-items: center;
-	border-bottom: 1px solid ${props => props.theme.colors.lightGray};
+	border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
 	display: flex;
 	height: 3em;
 	text-align: center;
@@ -27,19 +28,19 @@ const NavLinkImage = styled(Link)`
 `
 
 const NavLinkText = styled(Link)`
-	color: ${props => props.theme.colors.mediumGray};
+	color: ${(props) => props.theme.colors.mediumGray};
 	font-size: 1rem;
-	font-weight: ${props => props.theme.font.primary.semiBold};
+	font-weight: ${(props) => props.theme.font.primary.semiBold};
 	margin: 0 0.5rem 0 0;
 	padding: 0.25rem;
 	text-decoration: none;
 
 	&.current-page {
-		color: ${props => props.theme.colors.primary};
+		color: ${(props) => props.theme.colors.primary};
 	}
 
 	&:hover {
-		color: ${props => props.theme.colors.primary};
+		color: ${(props) => props.theme.colors.primary};
 		transition: all 200ms ease-in-out;
 	}
 `

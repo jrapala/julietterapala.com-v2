@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import styled from 'styled-components'
 import SectionTitle from '../elements/SectionTitle'
 import MasterTourLogo from '../elements/MasterTourLogo'
@@ -38,9 +38,7 @@ const About = ({ section }) => {
 		query AboutQuery {
 			image: file(relativePath: { eq: "profile-image.jpg" }) {
 				childImageSharp {
-					fluid {
-						...GatsbyImageSharpFluid_withWebp
-					}
+					gatsbyImageData(width: 300)
 				}
 			}
 			site {
@@ -64,6 +62,7 @@ const About = ({ section }) => {
 
 	const content = data.site.siteMetadata[section].content
 	const title = data.site.siteMetadata[section].title
+	const image = getImage(data.image)
 
 	return (
 		<Fragment>
@@ -72,8 +71,8 @@ const About = ({ section }) => {
 				{section === 'work' && <MasterTourLogo />}
 				{section === 'about' && (
 					<ImageContent>
-						<Image
-							fluid={data.image.childImageSharp.fluid}
+						<GatsbyImage
+							image={image}
 							alt="Juliette Rapala"
 							style={styles.imageWrapper}
 							imgStyle={styles.image}

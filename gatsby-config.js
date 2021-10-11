@@ -48,6 +48,7 @@ module.exports = {
 		`gatsby-plugin-offline`,
 		`gatsby-plugin-react-helmet`,
 		`gatsby-plugin-styled-components`,
+		`gatsby-plugin-image`,
 		`gatsby-remark-images`,
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -88,12 +89,6 @@ module.exports = {
 			resolve: `gatsby-plugin-typography`,
 			options: {
 				pathToConfigModule: `src/utils/typography`,
-			},
-		},
-		{
-			resolve: `gatsby-source-instagram-all`,
-			options: {
-				access_token: process.env.INSTAGRAM_TOKEN,
 			},
 		},
 	],
