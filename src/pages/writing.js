@@ -8,26 +8,24 @@ import articles from '../utils/articles'
 const Container = styled.section`
 	display: flex;
 	flex-direction: column;
-	margin-left: 1.5em;
-	max-width: 80%;
+
+	ul {
+		margin: 1.666rem 1rem;
+	}
 `
 
 const NotFoundPage = () => {
 	return (
 		<Layout>
 			<Seo title="Writing" />
-			<PageTitle title="Writing" />
+			<PageTitle>Writing</PageTitle>
 			<Container>
 				<p>Here are some of my blog posts!</p>
-				<ul style={{ marginBottom: '1.666rem', marginLeft: '1rem' }}>
-					{articles.map(article => (
+				<ul>
+					{articles.map((article) => (
 						<li key={article.link}>
 							<a
-								css={css`
-									color: black;
-								`}
 								href={article.link}
-								title={`Link to article ${article.title}.`}
 								target="_blank"
 								rel="noopener noreferrer"
 							>

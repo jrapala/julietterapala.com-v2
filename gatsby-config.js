@@ -5,9 +5,9 @@ require('dotenv').config({
 module.exports = {
 	siteMetadata: {
 		title: `Juliette Rapala`,
-		subtitle: `Software Developer`,
-		tagline: `I build JavaScript apps for the web, mobile, and desktop`,
-		description: `I build JavaScript apps for the web, mobile, and desktop`,
+		subtitle: `Software Engineer`,
+		tagline: `I build web and mobile experiences that work for <em>all</em> people.`,
+		description: `I build web and mobile experiences that work for all people.`,
 		author: `@jrapala`,
 		social: {
 			twitter: `julietter`,
@@ -15,7 +15,7 @@ module.exports = {
 			github: `jrapala`,
 		},
 		about: {
-			content: `<p>I am a web developer and software engineer who specializes in JavaScript and React.</p>`,
+			content: `<p>I am a software engineer who specializes in JavaScript and React.</p>`,
 			title: `Hi, I’m Juliette 👋`,
 		},
 		work: {

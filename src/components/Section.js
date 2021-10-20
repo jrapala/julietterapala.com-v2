@@ -7,29 +7,26 @@ import MasterTourLogo from '../elements/MasterTourLogo'
 
 const Container = styled.div`
 	display: flex;
+	align-items: center;
+	flex-direction: column;
 
-	@media screen and (max-width: 600px) {
-		align-items: center;
-		flex-direction: column;
+	@media screen and (min-width: 520px) {
+		flex-direction: row;
+		justify-content: space-between;
 	}
-`
-
-const Content = styled.div`
-	display: flex;
-	padding: 0 1.5em;
 `
 
 const ImageContent = styled.div`
 	display: flex;
-	margin-bottom: -2em;
-	margin-right: 7em;
-	margin-top: -3.5em;
-	order: 2;
-	padding: 0 1.5em;
+	order: -1;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 
-	@media screen and (max-width: 600px) {
-		margin: 0 auto;
-		order: -1;
+	@media screen and (min-width: 520px) {
+		order: 2;
+		padding: 0 1.5rem;
+		margin-top: -3.5rem;
+		margin-bottom: -2rem;
 	}
 `
 
@@ -38,7 +35,7 @@ const About = ({ section }) => {
 		query AboutQuery {
 			image: file(relativePath: { eq: "profile-image.jpg" }) {
 				childImageSharp {
-					gatsbyImageData(width: 300)
+					gatsbyImageData(width: 200, placeholder: BLURRED)
 				}
 			}
 			site {
@@ -66,20 +63,20 @@ const About = ({ section }) => {
 
 	return (
 		<Fragment>
-			<SectionTitle title={title} />
+			<SectionTitle>{title}</SectionTitle>
 			<Container>
-				{section === 'work' && <MasterTourLogo />}
 				{section === 'about' && (
 					<ImageContent>
 						<GatsbyImage
 							image={image}
-							alt="Juliette Rapala"
+							alt="Headshot of Juliette Rapala"
 							style={styles.imageWrapper}
 							imgStyle={styles.image}
 						/>
 					</ImageContent>
 				)}
-				<Content
+				{section === 'work' && <MasterTourLogo />}
+				<div
 					dangerouslySetInnerHTML={{
 						__html: content,
 					}}
@@ -96,8 +93,6 @@ const styles = {
 	},
 	imageWrapper: {
 		borderRadius: '50%',
-		display: 'flex',
-		order: 2,
 		height: '200px',
 		overflow: 'hidden',
 		width: '200px',

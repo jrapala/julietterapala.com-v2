@@ -5,7 +5,7 @@ import {
 	faGithub,
 	faLinkedin,
 } from '@fortawesome/free-brands-svg-icons'
-import Icon from '../elements/Icon'
+import IconLink from '../elements/IconLink'
 
 const socialSites = {
 	twitter: {
@@ -36,20 +36,20 @@ const SocialIcons = () => {
 	const { twitter, github, linkedin } = data.site.siteMetadata.social
 	return (
 		<div>
-			<Icon
+			<IconLink
 				icon={faTwitter}
 				url={`${socialSites.twitter.url}${twitter}`}
-				alt="Link to Juliette's Twitter"
+				description="Juliette's Twitter"
 			/>
-			<Icon
+			<IconLink
 				icon={faGithub}
 				url={`${socialSites.github.url}${github}`}
-				alt="Link to Juliette's GitHub"
+				description="Juliette's GitHub"
 			/>
-			<Icon
+			<IconLink
 				icon={faLinkedin}
 				url={`${socialSites.linkedin.url}${linkedin}`}
-				alt="Link to Juliette's LinkedIn"
+				description="Juliette's LinkedIn"
 			/>
 		</div>
 	)

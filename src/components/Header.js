@@ -1,39 +1,40 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useContext } from 'react'
+import styled, { ThemeContext } from 'styled-components'
 import { Link } from 'gatsby'
 // eslint-disable-next-line import/no-unresolved
 import { Location } from '@reach/router'
 import JRLogo from '../elements/JRLogo'
+import VisuallyHidden from '../components/VisuallyHidden'
 
 const Container = styled.header`
-	align-items: center;
-	border-bottom: 1px solid ${(props) => props.theme.colors.lightGray};
+	height: 9rem;
 	display: flex;
-	height: 3em;
+	flex-direction: column;
 	text-align: center;
+	align-items: center;
+	border-bottom: 1px solid ${({ theme: { colors } }) => colors.neutralLight};
 
-	@media screen and (max-width: 520px) {
-		height: 7.5em;
-		flex-direction: column;
+	@media screen and (min-width: 520px) {
+		height: 3.5rem;
+		flex-direction: row;
 	}
 `
 
 const NavLinkImage = styled(Link)`
-	margin: 2em 1em 0 1em;
+	margin-top: 0.75em;
+	width: 100%;
 
-	@media screen and (max-width: 520px) {
-		margin-top: 0.75em;
-		width: 100%;
+	@media screen and (min-width: 520px) {
+		margin: 2em 1em 0 1em;
+		width: auto;
 	}
 `
 
 const NavLinkText = styled(Link)`
-	color: ${(props) => props.theme.colors.mediumGray};
-	font-size: 1rem;
-	font-weight: ${(props) => props.theme.font.primary.semiBold};
-	margin: 0 0.5rem 0 0;
-	padding: 0.25rem;
+	color: ${(props) => props.theme.colors.neutralMedium};
+	font-weight: ${(props) => props.theme.fonts.primary.semiBold};
 	text-decoration: none;
+	padding: 0.25rem;
 
 	&.current-page {
 		color: ${(props) => props.theme.colors.primary};
@@ -46,20 +47,32 @@ const NavLinkText = styled(Link)`
 `
 
 const Nav = styled.nav`
-	margin-top: 0.1em;
-	@media screen and (max-width: 520px) {
-		display: flex;
+	display: flex;
+
+	a {
+		margin-right: 0.5rem;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	@media screen and (min-width: 520px) {
+		display: block;
 	}
 `
 
 const Header = () => {
+	const { colors } = useContext(ThemeContext)
+
 	return (
 		<Container>
 			<NavLinkImage to="/" activeClassName="current-page">
+				<VisuallyHidden>Juliette Rapala</VisuallyHidden>
 				<Location>
 					{({ location }) => {
 						return location.pathname === '/' ? (
-							<JRLogo color="#C92BBA" />
+							<JRLogo color={colors.primary} />
 						) : (
 							<JRLogo />
 						)
@@ -69,9 +82,6 @@ const Header = () => {
 			<Nav>
 				<NavLinkText to="/about" activeClassName="current-page">
 					About
-				</NavLinkText>
-				<NavLinkText to="/projects" activeClassName="current-page">
-					Projects
 				</NavLinkText>
 				<NavLinkText to="/writing" activeClassName="current-page">
 					Writing

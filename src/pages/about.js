@@ -7,7 +7,7 @@ import Section from '../components/Section'
 const About = () => (
 	<Layout>
 		<Seo title="About Me" />
-		<PageTitle title="About" />
+		<PageTitle>About</PageTitle>
 		<Section section="about" />
 		<Section section="work" />
 		<Section section="fun" />
