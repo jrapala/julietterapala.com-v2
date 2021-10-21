@@ -44,7 +44,7 @@ const Authors = styled.div`
 	margin: 0;
 
 	a {
-		font-weight: ${(props) => props.theme.fonts.regular};
+		font-weight: ${(props) => props.theme.fonts.primary.regular};
 		margin: 0 0.1em;
 	}
 `

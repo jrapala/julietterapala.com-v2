@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled, { withTheme } from 'styled-components'
+import styled from 'styled-components'
 
 const Container = styled.div`
 	display: flex;
@@ -86,4 +86,4 @@ const Hero = () => {
 	)
 }
 
-export default withTheme(Hero)
+export default Hero

@@ -20,6 +20,7 @@ declare module 'styled-components' {
             fontFamily: string;
             light: number;
             regular: number;
+            semiBold: number;
         },
     },
     debug: {
