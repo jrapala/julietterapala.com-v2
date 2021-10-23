@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { graphql, useStaticQuery } from 'gatsby'
-import Image from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/Layout'
 import Seo from '../components/Seo'
 import PageTitle from '../elements/PageTitle'
@@ -44,12 +44,12 @@ const Authors = styled.div`
 	margin: 0;
 
 	a {
-		font-weight: ${props => props.theme.font.regular};
+		font-weight: ${(props) => props.theme.fonts.primary.regular};
 		margin: 0 0.1em;
 	}
 `
 
-const StyledImage = styled(Image)`
+const StyledImage = styled(GatsbyImage)`
 	display: flex;
 	margin: 0 auto;
 	overflow: hidden;
@@ -71,20 +71,18 @@ const About = () => {
 		query {
 			reactionRadio01: file(relativePath: { eq: "reactionRadio01.png" }) {
 				childImageSharp {
-					fluid {
-						...GatsbyImageSharpFluid_withWebp
-					}
+					gatsbyImageData(width: 400, placeholder: BLURRED)
 				}
 			}
 			reactionRadio02: file(relativePath: { eq: "reactionRadio02.png" }) {
 				childImageSharp {
-					fluid {
-						...GatsbyImageSharpFluid_withWebp
-					}
+					gatsbyImageData(width: 400, placeholder: BLURRED)
 				}
 			}
 		}
 	`)
+	const reactionRadioImage01 = getImage(data.reactionRadio01)
+	const reactionRadioImage02 = getImage(data.reactionRadio02)
 
 	return (
 		<Layout>
@@ -108,12 +106,12 @@ const About = () => {
 					</p>
 					<Screenshots>
 						<StyledImage
-							fluid={data.reactionRadio01.childImageSharp.fluid}
+							image={reactionRadioImage01}
 							alt="Reaction Radio Screenshot"
 							imgStyle={styles.image}
 						/>
 						<StyledImage
-							fluid={data.reactionRadio02.childImageSharp.fluid}
+							image={reactionRadioImage02}
 							alt="Reaction Radio Screenshot"
 							imgStyle={styles.image}
 						/>

@@ -4,16 +4,13 @@ import styled from 'styled-components'
 import SocialIcons from './SocialIcons'
 
 const Container = styled.footer`
-	color: ${props => props.theme.colors.lightGray};
+	color: ${(props) => props.theme.colors.neutralMedium};
 	text-align: center;
-
-	> div {
-		color: ${props => props.theme.colors.mediumGray};
-	}
+	height: 4rem;
+	margin-bottom: 1rem;
 
 	> p {
-		font-size: 0.75em;
-		margin-top: 1em;
+		margin-top: 0.5rem;
 	}
 `
 
@@ -32,7 +29,7 @@ const Footer = () => {
 			<SocialIcons />
 			<p>
 				&copy; {new Date().getFullYear()}{' '}
-				{data.site.siteMetadata.footer}{' '}
+				{data.site.siteMetadata.footer}
 			</p>
 		</Container>
 	)

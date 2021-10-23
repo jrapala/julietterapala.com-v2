@@ -2,13 +2,13 @@ import React from 'react'
 import styled, { css } from 'styled-components'
 
 const Button = styled.a`
-	background: ${props => props.theme.colors.primary};
-	border: 3px solid ${props => props.theme.colors.primary};
+	background: ${(props) => props.theme.colors.primary};
+	border: 3px solid ${(props) => props.theme.colors.primary};
 	border-radius: 8px;
-	box-shadow: 4px 4px 4px ${props => props.theme.colors.mediumGray};
+	box-shadow: 4px 4px 4px ${(props) => props.theme.colors.neutralMedium};
 	color: #fff;
 	display: inline-block;
-	font-weight: ${props => props.theme.font.primary.bold};
+	font-weight: ${(props) => props.theme.fonts.primary.bold};
 	margin: 1em;
 	padding-left: 1.5em;
 	text-align: center;
@@ -21,8 +21,8 @@ const Button = styled.a`
 	}
 
 	&:hover {
-		background: ${props => props.theme.colors.pink};
-		border-color: ${props => props.theme.colors.pink};
+		background: ${(props) => props.theme.colors.primary};
+		border-color: ${(props) => props.theme.colors.primary};
 		cursor: pointer;
 		padding-left: 0;
 		transform: scale(1.05);
