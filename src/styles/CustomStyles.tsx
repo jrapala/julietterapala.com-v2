@@ -50,6 +50,10 @@ const CustomStyles = css`
 		font-weight: bold;
 		padding: 0.1em;
 	}
+
+	p {
+		margin-bottom: 1rem;
+	}
 `
 
 export default CustomStyles
