@@ -84,25 +84,6 @@ const Fun = () => (
       to concerts, baking desserts, and watching movies. I&apos;m a big bookworm and enjoy both
       reading and writing fiction.
     </p>
-    {/* <ul>
-      <li>
-        <b>Code!</b> I love learning new things, such as Gatsby and GraphQL, and building apps to
-        learn it (this site was built using both of those!).{' '}
-        <a href="/projects" rel="noopener noreferrer">
-          You can see more of my projects here.
-        </a>
-      </li>
-      <li>
-        <b>Write!</b> I like to write about things that I am learning. I also write a lot about
-        React Native, to try to make it more accessible to React developers.{' '}
-        <a href="/writing" rel="noopener noreferrer">
-          You can read some of my posts here.
-        </a>
-      </li>
-      <li>
-        <b>Travel!</b>
-      </li>
-    </ul> */}
   </>
 );
 

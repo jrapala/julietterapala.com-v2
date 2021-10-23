@@ -14,6 +14,11 @@ const StyledAside = styled.aside`
     padding-top: 1rem;
   }
 
+  .gatsby-image-wrapper {
+    position: relative;
+    z-index: 0;
+  }
+
   @media screen and (min-width: 650px) {
     margin-top: 2rem;
     padding: 0 2rem;
@@ -46,7 +51,12 @@ const AboutAside = () => {
   return (
     <StyledAside>
       {image && (
-        <GatsbyImage image={image} alt="Headshot of Juliette Rapala" style={styles.imageWrapper} />
+        <GatsbyImage
+          image={image}
+          alt="Headshot of Juliette Rapala"
+          imgStyle={styles.image}
+          style={styles.imageWrapper}
+        />
       )}
       <SectionTitle>How to Reach Me:</SectionTitle>
       <ul>
@@ -75,8 +85,7 @@ const AboutAside = () => {
 
 const styles = {
   image: {
-    height: '100%',
-    width: 'auto',
+    borderRadius: '50%',
   },
   imageWrapper: {
     borderRadius: '50%',
