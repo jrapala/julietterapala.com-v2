@@ -1,4 +1,4 @@
-const articles = [
+const posts = [
   {
     title: 'Migrating Your React Native iOS Project to Use CocoaPods',
     link: 'https://medium.com/@jrapala/migrating-your-react-native-ios-project-to-use-cocoapods-6feaca235d7e',
@@ -22,4 +22,4 @@ const articles = [
   },
 ];
 
-export default articles;
+export default posts;

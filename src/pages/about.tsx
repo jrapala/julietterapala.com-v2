@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import AboutAside from '../components/AboutAside';
@@ -36,10 +37,7 @@ const Bio = () => (
     <p>
       I spend a lot of time educating myself and others on how to make websites and applications
       accessible. I write about accessibility, design systems, CSS, React, SwiftUI, and React Native
-      in my blog.{' '}
-      <a href="/writing" rel="noopener noreferrer">
-        You can read my posts here.
-      </a>
+      in my blog. <Link to="/blog">You can read my posts here.</Link>
     </p>
     <p>I have a bachelor&apos;s degree in Sociology from Northwestern University.</p>
   </>
@@ -50,7 +48,7 @@ const Work = () => (
     <SectionTitle>What I Do For Work:</SectionTitle>
     <p>
       I currently work for{' '}
-      <a href="http://www.eventric.com" target="_blank" rel="noopener noreferrer">
+      <a href="http://www.fender.com" target="_blank" rel="noopener noreferrer">
         Fender
       </a>{' '}
       as a Software Engineer. At Fender, I help develop Fender Play, a guitar-learning platform, as
@@ -89,7 +87,10 @@ const Fun = () => (
 
 const About = () => (
   <Layout>
-    <Seo title="About Me" />
+    <Seo
+      title="Juliette Rapala | About"
+      description="I am a software engineer and accessibility advocate who builds applications for both web and mobile. I believe that the web should work for everyone, regardless of their abilities or circumstances."
+    />
     <AboutWrapper>
       <section>
         <PageTitle>About</PageTitle>

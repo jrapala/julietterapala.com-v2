@@ -3,25 +3,25 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Seo from '../components/Seo';
 import PageTitle from '../elements/PageTitle';
-import articles from '../utils/articles';
+import externalPosts from '../utils/externalPosts';
 
 const Container = styled.section`
   display: flex;
   flex-direction: column;
 `;
 
-const NotFoundPage = () => {
+const Writing = () => {
   return (
     <Layout>
-      <Seo title="Writing" />
-      <PageTitle>Writing</PageTitle>
+      <Seo title="Juliette Rapala | Blog" />
+      <PageTitle>Blog</PageTitle>
       <Container>
         <p>Here is a list of some of my blog posts:</p>
         <ul>
-          {articles.map(article => (
-            <li key={article.link}>
-              <a href={article.link} target="_blank" rel="noopener noreferrer">
-                {article.title}
+          {externalPosts.map(post => (
+            <li key={post.link}>
+              <a href={post.link} target="_blank" rel="noopener noreferrer">
+                {post.title}
               </a>
             </li>
           ))}
@@ -31,4 +31,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
+export default Writing;

@@ -4,11 +4,11 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Juliette Rapala`,
-    subtitle: `Software Engineer`,
-    tagline: `I build web and mobile experiences that work for <em>all</em> people.`,
+    title: `Juliette Rapala | Software Engineer`,
+    siteUrl: `https://julietterapala.com`,
     description: `I build web and mobile experiences that work for all people.`,
-    author: `@jrapala`,
+    author: `Juliette Rapala`,
+    twitterUsername: `@julietter`,
     social: {
       twitter: `https://twitter.com/julietter`,
       linkedin: `https://linkedin.com/in/julietterapala`,
@@ -41,8 +41,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
         name: `assets`,
+        path: `${__dirname}/content/assets`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/content/blog/`,
       },
     },
     {
